@@ -1,0 +1,797 @@
+<!DOCTYPE HTML>
+<!--
+	Road Trip by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Reddit How To Guide By Philip Chang</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="index.html">Reddit How To by <span>by Philip Chang</span></a></div>
+				<a href="#menu"><span>Menu</span></a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="#banner">Home</a></li>
+					<li><a href="#one">What is Reddit?</a></li>
+					<li><a href="#two">Get your API KEY</a>
+					<li><a href="#three">Get your API KEY-Continued Part 1</a>
+					<li><a href="#four">Get your API KEY-Continued Part 2</a>
+					<li><a href="#five">Reddit API Documentation</a>
+					<li><a href="#six">Method #1</a>
+					<li><a href="#seven">Method #1 - Example</a>
+					<li><a href="#eight">Method #1 - Breakdown Part 1</a>
+					<li><a href="#nine">Method #1 - Breakdown Part 2</a>
+					<li><a href="#ten">Method #1 + #2 Console Log</a>
+					<li><a href="#eleven">Method #2</a>
+					<li><a href="#twelve">Method #2 - Example</a>
+					<li><a href="#thirteen">Method #2 - Breakdown Part 1</a>
+					<li><a href="#fourteen">Method #2 - Breakdown Part 2</a>
+					<li><a href="#fifteen">Method #3</a>
+					<li><a href="#sixteen">Method #3 - Part 1</a>
+					<li><a href="#seventeen">Method #3 - Part 2</a>
+					<li><a href="#eighteen">Method #4</a>
+					<li><a href="#nineteen">Node.js</a>
+					<li><a href="#twenty">Wrappers and snoowrap</a>
+					<li><a href="#twentyone">Installing snoowrap</a>
+					<li><a href="#twentytwo">Using snoowrap to login</a>
+					<li><a href="#twentythree">Using snoowrap to post</a>
+					<li><a href="#twentyfour">Post Example Part 1</a>
+					<li><a href="#25">Post Example Part 2</a>
+					<li><a href="#26">Making the Bot Code</a>
+					<li><a href="#27">Bot Code Explanation Part 1</a>
+					<li><a href="#28">Bot Code Explanation Part 2</a>
+					<li><a href="#29">Bot Example Result</a>
+					<li><a href="#30">Image Credits</a>
+
+
+				</ul>
+			</nav>
+
+		<!-- Banner -->
+		<!--
+			Note: To show a background image, set the "data-bg" attribute below
+			to the full filename of your image. This is used in each section to set
+			the background image.
+		-->
+			<section id="banner" class="bg-img" data-bg="banner.jpg">
+				<div class="inner">
+					<header>
+						<h1>How to Guide of Reddit API by Philip Chang</h1>
+					</header>
+				</div>
+				<a href="#one" class="more">Introduction</a>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="wrapper post bg-img" data-bg="banner2.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>What is Reddit?</h2>
+							<div class="content">
+							<p>Reddit is known as the front page of the internet. It is a social news aggregation, web content rating and discussion website. There are many different subreddits or discussion groups that appeal to a wide variety of users. Whether you love cute animals (/r/aww) or just want to see the news (/r/news) or to even things like cats standing up (/r/CatsStandingUp), there exists a subreddit for you. You can use it to read the news during breakfast, or get help or suggestions with your hobbies or just plain procrastinating. Reddit will provide you with endless hours of entertainment.
+								</div>
+								<footer>
+									<a href="http://www.reddit.com" class="button alt">Visit reddit</a>
+								</footer>
+								<br />
+							<h2>What is an API?</h2>
+						</header>
+						<div class="content">
+							<p>An API, otherwise known as an application program interface, is a set of routines, protocols and tools for building software applications. An API consists of building blocks to specify how software components should interact with eachother. A programmer can then use these blocks to create a wide variety of different programs. There exists a variety of different types of APIs for different applications. Today, we will learn how to use the Reddit API</p>
+						</div>
+						<footer>
+							<a href="https://en.wikipedia.org/wiki/Application_programming_interface" class="button alt">Learn more about API's from Wikipedia</a>
+							<br /><br />
+							<a href="#two" class="button alt">Let's Get Started on using Reddit API</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#two" class="more">Learn More</a>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="wrapper post bg-img" data-bg="banner3.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>Get your API Key or in this case </h2>
+							<p> To get started with using the API we will first need to get an API key or in this case the Client ID and Secret </p>
+						</header>
+						<div class="content">
+							<h5>1. Registering for a Reddit Account</h5>
+							<p>Go to http://www.reddit.com and click login or signup<p>
+								<a href = "images/red1.png"> <figure><img class = "resize" src="images/red1.png" >
+									<figcaption>click for fullsize</figcaption></figure></a>
+							<h5>2. Once signup and logged in go to your preferences</h5>
+							<a href = "images/red2.png"> <figure><img class = "resize1" src="images/red2.png" >
+								<figcaption>click for fullsize</figcaption></figure></a></br>
+							<footer>
+								<a href="#three" class="button alt">Next Step</a>
+							</footer>
+						</div>
+						<br />
+
+					</article>
+				</div>
+				<a href="#three" class="more">Next Step</a>
+			</section>
+
+		<!-- Three -->
+			<section id="three" class="wrapper post bg-img" data-bg="banner3.jpg">
+				<div class="inner">
+					<article class="box">
+
+						<div class="content">
+							<h5>3. Once you click on preferences, select the apps tab and click create an app button</h5>
+							<a href = "images/red3.png"> <figure><img class = "resize" src="images/red3.png" >
+								<figcaption>click for fullsize</figcaption></figure></a>
+							<h5>4. Fill out the information and select script</h5>
+							<a href = "images/red4.png"> <figure><img class = "resize" src="images/red4.png" >
+								<figcaption>click for fullsize</figcaption></figure></a>
+						</div>
+						<footer>
+						</br>
+							<a href="#four" class="button alt">Next Step</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#four" class="more">Learn More</a>
+			</section>
+
+		<!-- Four -->
+			<section id="four" class="wrapper post bg-img" data-bg="banner3.jpg">
+				<div class="inner">
+					<article class="box">
+
+						<div class="content">
+							<h5>5. Congratulations! You now have an Reddit API Secret and Client ID</h5>
+							<a href = "images/red5.png"> <figure><img class = "resize" src="images/red5.png" >
+								<figcaption>click for fullsize</figcaption></figure></a><br /> <br />
+								<p> The section labeled "secret" that is highlighted out in maroon is your Secret</p>
+								<p> The top left corner of the picture that is highlighted out in teal is your Client ID</p>
+
+						</div>
+						<footer>
+						</br>
+							<a href="#five" class="button alt">Let's start having some fun!</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#five" class="more">Learn More</a>
+			</section>
+
+			<section id="five" class="wrapper post bg-img" data-bg="banner4.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>Reddit API Documentation</h2>
+						</header>
+						<div class="content">
+							<p>The documentation of the reddit API can be a bit confusing and overwhelming for people who are new to javascript and/or working with APIs in general.</p>
+							<footer>
+								<a href="https://www.reddit.com/dev/api/" class="button alt">Click here to see the offical reddit API documentation</a>
+							</footer>
+							<br />
+							<p>Ready to get started?</p>
+							<p>Click on the button below</p>
+						</div>
+						<br />
+						<footer>
+							<a href="#six" class="button alt">Lets Get Going!!!</a> <!---edit this --->
+						</footer>
+					</article>
+				</div>
+				<a href="#six" class="more">Learn More</a>
+			</section>
+
+			<section id="six" class="wrapper post bg-img" data-bg="banner5.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>Method #1 - Getting to know ajax, json and jquery</h2>
+							<p>For this method, an API key is not required. This is a simple method for us to learn the basics.</p>
+						</header>
+						<div class="content">
+							<p>Ajax is a client side script that communicates with a server or database that doesn't need a complete page refresh. In simple terms, it is a method for exchanging data with a server and updating parts of the webpage without refreshing the page.</p>
+							<p>JSON on the other hand is a syntax for storing and exchanging data between a client and server. It is used as a means to structure data in a readable format.</p><br/>
+							<p>jQuery is a javascript library that makes it easier to do things like HTML document traversal and manipulation, event handling, animation, and Ajax simpler</p>
+							<p>Now you know what they are, once you are ready to get started, click the "Ready?" button.</p>
+						</div>
+						<footer>
+							<a href="#seven" class="button alt">Ready ?</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#seven" class="more">Learn More</a>
+			</section>
+
+			<section id="seven" class="wrapper post bg-img" data-bg="banner5.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>Method #1 - Example</h2>
+							<p>This example shows how to retrieve images on the front page of any subreddit using AJAX, JSON, and jQuery.</p>
+						</header>
+						<div class="content">
+							<iframe width="100%" height="300" src="https://jsfiddle.net/howtored/79fzf6tj/10/embedded/js,html,css,result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+						</div>
+						<footer>
+							<br /><a href="#eight" class="button alt">Let's break it down</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#eight" class="more">Learn More</a>
+			</section>
+
+			<section id="eight" class="wrapper post bg-img" data-bg="banner5.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h5>Method #1 - Breakdown: Part 1</h5>
+						</header>
+						<div class =  style="text-align: center">
+							<div style="text-align: left">
+							<pre><code class="javascript">var url = "HTTPS://www.reddit.com/r/";
+var end = "/.json?"</pre></code>
+			<p> This section of the code shows the url we are sending our requests to with the url being the reddit default subreddit url and the "end" which is what we add to the end of the url to get JSON data</p>
+						</div>
+						<footer>
+							<a href="#nine" class="button alt">Method #1 Breakdown: Part 2</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#nine" class="more">Learn More</a>
+			</section>
+
+
+			<section id="nine" class="wrapper post bg-img" data-bg="banner6.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h5>Method #1 - Breakdown: Part 2</h5>
+						</header>
+						<div class =  style="text-align: center">
+							<div style="text-align: left">
+								<pre><code class="javascript">document.getElementById("subsend").addEventListener('click', function(event) {
+	$( ".pics" ).empty();
+	var submit = document.getElementById('sub').value;
+	$.getJSON(url + submit + end, function(data) {
+	console.log(data);
+	$.each(data.data.children, function(i,object){
+			$("&lt;img&gt;").attr("src", object.data.url).appendTo(".pics");
+	});
+	});
+	});</pre></code>
+		<p>The "document.getElementById("subsend").addEventListener('click', function(event)" is a method that says when you click the submit button it will run the code that is nested inside it. Because we  want the site to "refresh" and be a blank slate everytime we append to images to it we use the .empty jQuery method which will remove all child nodes of the pics div. Next, we make a variable called submit which takes the text that was inputted by the user. Now, we put it all together with the variables url, submit, and end. We use the getJSON method on this combination, which loads JSON-encoded data from the server using a "GET" request. Now that we have the JSON loaded, we iterate through the data using the jQuery each function. The each function is a generic iterator that can iterate over both objects and arrays. The "data" is what we recieved from the getJSON request. The attr method that sets attributes to a selector. The selector in jQuery is used to find or select HTML elements based on their name, id, class, type, attribute, values of attribute and much more. In our case, we use it the HTML img tag as our selector and we give it the attributes of a src and url. After that we appendTo method to append images to the body. As a final result we can see all the images on teh front page of the subreddit in the results tab on jsfiddle. </p>
+							</div>
+						<footer>
+							<a href="#ten" class="button alt">Ready ?</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#ten" class="more">Learn More</a>
+			</section>
+
+
+			<section id="ten" class="wrapper post bg-img" data-bg="banner5.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h5>Method #1 - Console Log</h5>
+							<p>Now that we explained all the jQuery methods we used, we should explain the console log.</p>
+						</header>
+						<div class="content">
+							<a href = "images/consolelog.png"> <figure><img class = "resize1" src="images/consolelog.png" >
+								<figcaption>click for fullsize</figcaption></figure></a><br /> <br />
+						</div>
+						<p> The image above is what is displayed by the console log. The console.log prints text to the console and useful for debugging purposes. In our case, we use the each function on data.data.children. The getJSON returns the data, in the returned data, there is a subtree called data, and in this tree there is another subtree called children which consists of an array of objects. These objects contain a large variety of data including the images that we are appending to our page. However not all the objects are images, which is why even though there are 25 objects in the array, there are less images on the results page. In addition, we make the request through HTTPS and some of the images are from http, which is less secure so it will not allow us to access the data from children with urls from a http protocol. </p>
+						<footer>
+							<a href="#eleven" class="button alt">Onwards to Method #2</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#eleven" class="more">Learn More</a>
+			</section>
+
+
+			<section id="eleven" class="wrapper post bg-img" data-bg="banner6.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>Method #2 - Pure Javascript</h2>
+						<br />
+							<p>This method is the same as Method #1, however, this time we will not be using jQuery.</p>
+						</header>
+						<div class="content">
+							<p>Using the jQuery library makes things a lot easier. Without it, tasks become more "difficult" or "tedious". But it is important to learn and understand javascript without jQuery's aid.</p>
+							<p>So for this example, I will be showing you how to get pictures from a subreddit's front page step by step without jQuery.</p>
+						</div>
+						<footer>
+							<a href="#twelve" class="button alt">Let's get started</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#twelve" class="more">Learn More</a>
+			</section>
+
+
+			<section id="twelve" class="wrapper post bg-img" data-bg="banner6.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>Method #2 - Example</h2>
+						<br />
+							<p>This method is the same as Method #1, however, this time we will not be using jQuery.</p>
+						</header>
+						<div class="content">
+							<iframe width="100%" height="300" src="https://jsfiddle.net/howtored/jyashenb/4/embedded/js,html,css,result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+						</div>
+						<footer><br />
+							<a href="#thirteen" class="button alt">Let's break it down</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#thirteen" class="more">Learn More</a>
+			</section>
+
+			<section id="thirteen" class="wrapper post bg-img" data-bg="banner6.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>Method #2 - Breakdown: Part 1</h2>
+						</header>
+						<div class =  style="text-align: center">
+							<div style="text-align: left">
+							<pre><code class = "javascript">var url = "https://www.reddit.com/r/";
+var end = "/.json?"
+document.getElementById("subsend").addEventListener("click", function(event){
+var elements = document.getElementsByTagName('img');
+for (var i = 0; i < elements.length; i++) {
+    elements[i].style.display = 'none';
+		var submit = document.getElementById("sub").value;
+var req = new XMLHttpRequest();
+req.open("GET", url + submit + end, true);
+req.addEventListener("load",function(){
+}</pre></code>
+<p> The variable url is the default subreddit url and the variable end is what we add to the end of the url to get the JSON data. The event listener makes it so that the methods inside will run if the user clicks the submit button. Next, the variable elements is set to all the elements that have the image tag. Then we use a for loop to iterate through all the images and we set all the images to not display. This way the page will refresh and you will not see any pictures from another subreddit when the user submits a new input. Then we set submit to equal to the user input. After this we create a new variable called req that is a XMLHttpRequest object, meaning it is an object that can be used to request data from a web server. Then we use the open method, which opens a request, on req that sends a GET request to our url composed of the variables url, submit, and end and has a paraemter of true. The true means that it is an asynchronous request. We add an event listener meaning the methods inside it run when the resource and dependent resources have finished loading.
+</p>
+						</div>
+						<footer>
+							<a href="#fourteen" class="button alt">Method #2 - Breakdown: Part 2</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#fourteen" class="more">Learn More</a>
+			</section>
+
+			<section id="fourteen" class="wrapper post bg-img" data-bg="banner6.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>Method #2 - Breakdown: Part 2</h2>
+						</header>
+						<div class =  style="text-align: center">
+							<div style="text-align: left">
+							<pre><code class = "javascript">
+    if(req.status >= 200 && req.status < 400){
+      var response = JSON.parse(req.responseText);
+      console.log(response);
+  for(var i = 0; i < response.data.children.length; i++){
+  var object =response.data.children[i]
+      var temp = document.createElement("img");
+      temp.setAttribute("src",object.data.url);
+      document.getElementById("pics").appendChild(temp);
+      } }
+    else{
+      console.log("Error in network request: " + req.statusText);
+    }})
+  req.send(null);
+  event.preventDefault();});
+}</pre></code>
+<p> The if(req.status >= 200 && req.status < 400){ part is the parameters of our asynchronous request to see if it is ready. Then we create create a new variable response which is set to the parsed data. After this, we use a for loop to iterate through all the children, and in this for loop we create a new variable and set it to response.data.children[i]. With this variable, we set the attributes of src and url from the data in children and finally we append it to the pics div.</p>
+						</div>
+						<footer>
+							<a href="#ten" class="button alt">Click to see the Console Log</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<a href="#fifteen" class="button alt">Continue to Method #3</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#fifteen" class="more">Learn More</a>
+			</section>
+
+			<section id="fifteen" class="wrapper post bg-img" data-bg="banner7.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>Method #3 - Getting a Token and Account Information</h2>
+						</header>
+						<div class="content">
+							<p>In this section we will be using our secret and client ID to get a token. A token is maybe required to use any functions or methods that are account-based. Reddit uses OAuth2 authentication which is is a token based authentication standard and it allows third party services to access a user's accounts without exposing a user's password.</p>
+							<p> For this section we will be using a command line such as Terminal that allows you to use curl.</p>
+							<a href = "https://github.com/reddit/reddit/wiki/OAuth2" class="button alt"> Click here to learn more about Outh2</a>
+						</div>
+						<br /> <br />
+						<footer>
+							<a href="#sixteen" class="button alt">Get started on getting your own Token</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#sixteen" class="more">Learn More</a>
+			</section>
+
+			<section id="sixteen" class="wrapper post bg-img" data-bg="banner7.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h4>Method #3 - Part 1</h4>
+						</header>
+						<div class="content">
+							<p> First open up your command line and enter the following line<p>
+								<pre><code class = "nohighlight">curl -X POST -d 'grant_type=password&username=REDDIT_USERNAME&password=REDDIT_PASSWORD' --user 'CLIEND_ID:CLIENT_SECRET' https://www.reddit.com/api/v1/access_token</pre></code>
+							<p>Replace the REDDIT_USERNAME with your username and REDDIT_PASSWORD with your account password. Then replace CLIENT_ID with your own client id and CLIENT_SECRET with your own secret. You can find both the CLIENT_ID and CLIENT_SECRET on the app tab of your preferences page. I will now show you an example.</p>
+							<a href = "images/token1.png"> <figure><img class = "resize" src="images/token1.png" >
+								<figcaption>click for fullsize</figcaption></figure></a>
+						</div>
+						<p>The part highlighted in teal is where your password goes, the part highlighted in red is where your client ID goes and the part highlighted in blue is where your secret goes. Finally, the area that is circled in silver is your access token. howtophilip is my username.</p>
+						<p> Congratulations, now you should have your access token, let's get account information.
+							<p> Please NOTE: The token only lasts for 1 hour. After 1 hour, you will have to request another token.</p>
+						<footer>
+							<a href="#seventeen" class="button alt">Method #3 Part 2 - Getting account information</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#seventeen" class="more">Learn More</a>
+			</section>
+
+			<section id="seventeen" class="wrapper post bg-img" data-bg="banner7.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h4>Method #3 - Part 2</h4>
+						</header>
+						<div class="content">
+							<p> Now that you have your token, let's get your account information. Input the command below to your command line to get your account information. Replace TOKEN with the token you recieved in part 1 and PROJECT with the name of your project and YourUserName with your reddit username</p>
+							<pre><code>curl -H "Authorization: bearer TOKEN" -A "PROJECT by YourUsername" https://oauth.reddit.com/api/v1/me</pre></code>
+							<p>If you have done this, this is what it should look like</p>
+							<a href = "images/token2.png"> <figure><img class = "resize1" src="images/token2.png" >
+								<figcaption>click for fullsize</figcaption></figure></a>
+								<p> There is a ton of information that is sent back to us, such as I am not an employee, I dont have mail, my name, and I have no gold credits and so much more. This is a good method for getting all your account information at once.</p>
+								<p> Now are you ready for the last part? Click the button below</p>
+						</div>
+						<footer>
+							<a href="#eighteen" class="button alt">Method #4 - Making a Bot</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#eighteen" class="more">Learn More</a>
+			</section>
+
+			<section id="eighteen" class="wrapper post bg-img" data-bg="banner8.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>Method #4 - Making a Bot</h2>
+						</header>
+						<div class="content">
+							<p>In this section we will be covering how to make a bot.</p>
+							<p>We will be explaining node.js, wrappers, and snoowrap.</p>
+							<p>Finally, we will be using these resources to make a bot.</p>
+						</div>
+						<footer>
+							<a href="#nineteen" class="button alt">Get Started</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#nineteen" class="more">Learn More</a>
+			</section>
+
+
+
+			<section id="nineteen" class="wrapper post bg-img" data-bg="banner8.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h3>Method #4 - Overview of Node.js</h3>
+						</header>
+						<div class="content">
+							<h5>What is Node.js?</h5>
+							<p>Node.js is an open-source, cross platform run-time environemtn for executing JavaScript code server side.</p>
+							<h5>Where can you download Node.js</h5>
+							<a href= "https://nodejs.org/en/" class = "button alt"> Click here to download Node.js</a><br /><br />
+							<h5>Where are is the documentation to see all of what Node.js can do</h5>
+							<a href = "https://nodejs.org/en/docs/" class = "button alt"> Click here to view the documentation</a>
+
+						</div>
+						<br / ><br />
+						<footer>
+							<a href="#twenty" class="button alt">Next: Learn about wrappers</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#twenty" class="more">Learn More</a>
+			</section>
+
+			<section id="twenty" class="wrapper post bg-img" data-bg="banner8.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h3>Method #4 - Overview of wrappers and snoowrap</h3>
+						</header>
+						<div class="content">
+							<h5>What is a Wrapper?</h5>
+							<p>A wrapper is essentially a program or a script that "wraps" the functions of another program. It generally, makes it easier to use the functions of the program that it wraps.</p>
+							<br / >
+							<h5>What is snoowrap?</h5>
+							<p>snoowrap is a fully featured JavaScript wrapper for the reddit API. It provides a simple interface to access every reddit API endpoint.</p><br />
+							<a href = "https://not-an-aardvark.github.io/snoowrap/index.html" class = "button" >Click here to view snoowrap's documentation</a><br /><br />
+							<p>Now that you know what Node.js and snoowrap are, we will start building a bot.</p>
+						</div>
+						<footer>
+							<a href="#twentyone" class="button alt">Ready to build your bot ?</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#twentyone" class="more">Learn More</a>
+			</section>
+
+			<section id="twentyone" class="wrapper post bg-img" data-bg="banner9.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>Method #4 - Getting everything set up</h2>
+						</header>
+						<div class="content">
+						<ol><li> First, install Node.js onto your computer.</li><li>Create a folder for your bot and to install snoowrap.</li>
+							<li> Once you have installed Node.js navigate your way to the Node.js command prompt.</li>
+							<li> In the command prompt navigate your way to the folder you created and type the following command</li>
+							<li><pre><code>npm install snoowrap</pre></code></li>
+							<p>After doing this it should look something like this</p>
+							<a href = "images/bot1.png"> <figure><img class = "resize1" src="images/bot1.png" >
+								<figcaption>click for fullsize</figcaption></figure></a>
+						</ol>
+						</div>
+						<footer>
+							<a href="#twentytwo" class="button alt">Next Step: Logging In</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#twentytwo" class="more">Learn More</a>
+			</section>
+
+			<section id="twentytwo" class="wrapper post bg-img" data-bg="banner9.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>Method #4 - Logging into Reddit API with snoowrap</h2>
+						</header>
+						<div class =  style="text-align: center">
+							<div style="text-align: left">
+							<ol><li>Create a a new javascript file and enter the following code</li>
+								<li><pre><code>const snoowrap = require('snoowrap');
+
+const r = new snoowrap({
+  userAgent: 'put your user-agent string here',
+  clientId: 'put your client id here',
+  clientSecret: 'put your client secret here',
+  username: 'put your username here',
+  password: 'put your password here'
+});
+</pre></code></li>
+							</ol>
+							<p> This code was taken from the snoowrap documentation. The "require snoowrap" in the first line is used to indicate that you want to use snoowrap with your bot. The const r is the parameters to which you will be sending to reddit each time you submit a request. The userAgent is whatever you want it to be, it it used fas a means for reddit to identify who you are. Replace the text in the quotes with your own user agent. Then replace the text in the quotes with your clientId. Do this for your secret in clientSecret, username and password. The username and password is the account you created to use reddit.</p>
+						</div>
+						<footer>
+							<a href="#twentythree" class="button alt">Next: Getting your Bot to Post</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#twentythree" class="more">Learn More</a>
+			</section>
+
+			<section id="twentythree" class="wrapper post bg-img" data-bg="banner9.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>Method #4 - Making your a post</h2>
+						</header>
+						<div class =  style="text-align: center">
+							<div style="text-align: left">
+								<p> Now we want to make our bot make a post. Like before in your bot's js file where snoowrap is installed add the following line of code</p>
+								<pre><code>r.getSubreddit('bottesting')
+.submitSelfpost({title: 'TITLE', text: 'BODY'});</pre></code>
+<p>Append this to the logging in code you did earlier. The getSubreddit method is used to navigate to the subreddit where you would like to make the post. The submitSelfpost method lets the bot know that you want to submit a post with the parameters of title and text. You can replace the "bottesting" with the subreddit you would like to post to. In addition, you can replace the TITLE in the quotes with what you want your thread title to be and the BODY with what you want the text to be. When you are done all you have to do is go back to your node.js command prompt, navigate to your bot's folder and type "node bot.js", with bot being the name of your bot.</p>
+						</div>
+						<footer>
+							<a href="#twentyfour" class="button alt">Next: Example of Posting</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#twentyfour" class="more">Learn More</a>
+			</section>
+
+			<section id="twentyfour" class="wrapper post bg-img" data-bg="banner9.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>Method #4 - Post Example</h2>
+						</header>
+						<div class="content">
+							<p>Your code should look like this. <a href = "images/bot2.png"> <figure><img class = "resize1" src="images/bot2.png" >
+								<figcaption>click for fullsize</figcaption></figure></a>Your command prompt should look something like this.<a href = "images/bot3.png"> <figure><img class = "resize1" src="images/bot3.png" >
+									<figcaption>click for fullsize</figcaption></figure></a></p>
+						</div>
+						<footer>
+							<a href="#25" class="button alt">Next: Example continued</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#25" class="more">Learn More</a>
+			</section>
+
+
+			<section id="25" class="wrapper post bg-img" data-bg="banner9.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>Method #4 - Post example continued</h2>
+						</header>
+						<div class="content">
+							<p>Now on the reddit page you should see your own post. And here it is.</p>
+							<a href = "images/bot4.png"> <figure><img class = "resize" src="images/bot4.png" >
+								<figcaption>click for fullsize</figcaption></figure></a>
+								<p> Now you know how to make a post. Let's make a bot that will perform a search on a subreddit and then message you the results.</p>
+						</div>
+						<footer>
+							<a href="#26" class="button alt">Click to start making the bot</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#26" class="more">Learn More</a>
+			</section>
+
+
+			<section id="26" class="wrapper post bg-img" data-bg="banner9.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>Method #4 - Making the bot</h2>
+						</header>
+						<div class =  style="text-align: center">
+							<div style="text-align: left">
+								<p>Like before first create a new js file for your bot. Add the login code that was provided earlier and fill it with your own information</p>
+								<p>Below, I will show you the code to search for a specific query on /r/buildapcsales and message you the results</p>
+								<pre><code>var all = new Array();
+r.getSubreddit('buildapcsales').search({query: 'GPU', time: 'week'})
+.then(function(sales){
+  for (var i = 0; i < sales.length; i++){
+    var stuff = new Array();
+    stuff.push((sales[i].title) + "\n\n" + "[Link to Reddit Post]" + "(" + (sales[i].permalink)+ ")" + "\n\n" + "[Link to Sale]" +"(" +(sales[i].url)+ ")" + "\n\n")
+    for (var j = 0; j < stuff.length; j++){
+      all += stuff[j];}
+    r.composeMessage({
+      to: 'howtophilip',
+      subject: "Your Daily Sales for GPUs",
+      text: all  })}})</pre></code>
+						</div>
+						<footer>
+							<a href="#27" class="button alt">Click for an explanation</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#27" class="more">Learn More</a>
+			</section>
+
+
+
+			<section id="27" class="wrapper post bg-img" data-bg="banner9.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>Method #4 - Explanation of Code</h2>
+						</header>
+						<div class="content">
+							<p>The first thing we do is create an array, in this case an array called "all", for the final body of text you want to send in the private message. In this case, we used a variable called all. Before we start explaining the next parts, it is important to know what a javascript promise is. When using the snoowrap wrapper, all the methods return a promise. A promise represents the eventual result of an asynchronous operation. In addition, a promise is convenient to write because you can do things asynchronously without the use of callbacks or what many refer to as "callback hell".</p>
+							<p>The getSubReddit method allows us navigate to the subreddit, we are using buildapcsales but you could replace this with any subreddit you would like. The search method then allows us to search through the method with the parameters of query and time. The query is what you want to find, we use GPU but again you can use something else, and time is the timespan of posts that you would like to retrieve from. Time could be hour, day, week, month, year or all. </p>
+						</div>
+						<footer>
+							<a href="#28" class="button alt">Part 2 of Explanation</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#28" class="more">Learn More</a>
+			</section>
+
+			<section id="28" class="wrapper post bg-img" data-bg="banner9.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>Method #4 - Explanation of Code - Continued</h2>
+						</header>
+						<div class =  style="text-align: center">
+							<div style="text-align: left">
+								<p>The .then method is then used to return the promise. We then use the promise to iterate through the returned "sales", this is also a variable you could rename to whatever you want. We use a for loop to iterate through the "sales". In this for loop, we create a new array, "stuff" and push the title, reddit post link, and the link that the original reddit poster posted onto this array. The "\n\n" signifies new lines, while the brackets and parentheses are used because reddit uses a custom version of marksup. The brackets are used for a link name while the parenthesis are used for the link url.</p>
+								<p>We then use use another for loop and iterate through all the items we appended onto the array "stuff", and add everything onto the all array. Then nested inside the original for loop, we use the composeMessage method. This method has the parameters of of to, subject and text. The "to" is who you want to send the message too, in this case I sent it to myself, so it is my own username. The subject is what the messages intent is. And finally the text is the body of the message. In this case, it is all, it contains all the titles, links to the post, and the url the post links to.</p>
+						</div>
+						<footer>
+							<a href="#29" class="button alt">Let's Run the Bot and see what we get</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#29" class="more">Learn More</a>
+			</section>
+
+
+
+			<section id="29" class="wrapper post bg-img" data-bg="banner9.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>Method #4 - Example of What should happen</h2>
+						</header>
+						<div class="content">
+							<p>Now that we know how the bot works, lets run it again using the node.js command prompt. If you did everything exactly as explained then you should have something similiar to the results shown below. Make sure you check your inbox, that is where everything should be.</p>
+							<a href = "images/bot5.png"> <figure><img class = "resize1" src="images/bot5.png" >
+								<figcaption>click for fullsize</figcaption></figure></a>
+								<p>Congratulations!!! You have finished this how to guide on the reddit API. You have all the tools and knowledge you need to know in order to use the reddit API to its full potential. Have fun!</p>
+						</div>
+						<footer>
+							<a href="#30" class="button alt">Image Credits</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#30" class="more">Learn More</a>
+			</section>
+
+			<section id="30" class="wrapper post bg-img" data-bg="banner10.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h3>Image Credits</h3>
+						</header>
+						<div class =  style="text-align: center">
+							<div style="text-align: left">
+								<ul>
+									<li><p>banner1.jpg  Author: NASA																	<a href="https://www.flickr.com/photos/nasa2explore/24608146836/">Original Image Link</a></p></li>
+									<li><p>banner2.jpg  Author: Beatrice Murch												<a href="https://www.flickr.com/photos/blmurch/557523045">Original Image Link</a></p></li>
+									<li><p>banner3.jpg  Author: Mechatronics Guy											<a href="https://www.flickr.com/photos/38462165@N05/5887122595">Original Image Link</a></p></li>
+									<li><p>banner4.jpg  Author: Antonio Zugaldia											<a href="https://www.flickr.com/photos/23526149@N00/5133358349">Original Image Link</a></p></li>
+									<li><p>banner5.jpg  Author: The National Archives (UK)						<a href="https://upload.wikimedia.org/wikipedia/commons/e/e0/A_view_of_the_server_room_at_The_National_Archives.jpg">Original Image Link</a></p></li>
+									<li><p>banner6.jpg  Author: Shawn O'Neil													<a href="https://www.flickr.com/photos/oneilsh/14601920735">Original Image Link</a></p></li>
+									<li><p>banner7.jpg  Author: Rama																	<a href="https://commons.wikimedia.org/wiki/File:NEMA-IMG_0519.jpg">Original Image Link</a></p></li>
+									<li><p>banner8.jpg  Author: 1st Class Robert R. McRill(US NAVY)		<a href="https://commons.wikimedia.org/wiki/File:US_Navy_050414-N-5526M-008_The_Talon_3B_robot_unit_climbs_a_flight_of_stairs_looking_for_explosives_during_a_training_mission_at_a_Bahrain_training_range.jpg">Original Image Link</a></li>
+									<li><p>banner9.jpg  Author: Lars Plougmann												<a href="https://commons.wikimedia.org/wiki/File:Robot_jockey_army.jpg">Original Image Link</a></p></li>
+									<li><p>banner10.jpg Author: vistamommy														<a href="http://www.flickr.com/photos/27282406@N03/4134661728/">Original Image Link</a></p></li>
+								</ul>
+						</div>
+			</section>
+
+
+
+
+
+
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/highlight.pack.js"></script>
+			<script>hljs.initHighlightingOnLoad();</script>
+
+	</body>
+</html>
