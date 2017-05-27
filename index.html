@@ -112,10 +112,10 @@
 						<div class="content">
 							<h5>1. Registering for a Reddit Account</h5>
 							<p>Go to http://www.reddit.com and click login or signup<p>
-								<a href = "images/red1.png"> <figure><img class = "resize" src="images/red1.png" >
+								<a href = "images/red1.PNG"> <figure><img class = "resize" src="images/red1.PNG" >
 									<figcaption>click for fullsize</figcaption></figure></a>
 							<h5>2. Once signup and logged in go to your preferences</h5>
-							<a href = "images/red2.png"> <figure><img class = "resize1" src="images/red2.png" >
+							<a href = "images/red2.PNG"> <figure><img class = "resize1" src="images/red2.PNG" >
 								<figcaption>click for fullsize</figcaption></figure></a></br>
 							<footer>
 								<a href="#three" class="button alt">Next Step</a>
@@ -135,10 +135,10 @@
 
 						<div class="content">
 							<h5>3. Once you click on preferences, select the apps tab and click create an app button</h5>
-							<a href = "images/red3.png"> <figure><img class = "resize" src="images/red3.png" >
+							<a href = "images/red3.PNG"> <figure><img class = "resize" src="images/red3.PNG" >
 								<figcaption>click for fullsize</figcaption></figure></a>
 							<h5>4. Fill out the information and select script</h5>
-							<a href = "images/red4.png"> <figure><img class = "resize" src="images/red4.png" >
+							<a href = "images/red4.PNG"> <figure><img class = "resize" src="images/red4.PNG" >
 								<figcaption>click for fullsize</figcaption></figure></a>
 						</div>
 						<footer>
@@ -157,7 +157,7 @@
 
 						<div class="content">
 							<h5>5. Congratulations! You now have an Reddit API Secret and Client ID</h5>
-							<a href = "images/red5.png"> <figure><img class = "resize" src="images/red5.png" >
+							<a href = "images/red5.PNG"> <figure><img class = "resize" src="images/red5.PNG" >
 								<figcaption>click for fullsize</figcaption></figure></a><br /> <br />
 								<p> The section labeled "secret" that is highlighted out in maroon is your Secret</p>
 								<p> The top left corner of the picture that is highlighted out in teal is your Client ID</p>
@@ -293,7 +293,7 @@ var end = "/.json?"</pre></code>
 							<p>Now that we explained all the jQuery methods we used, we should explain the console log.</p>
 						</header>
 						<div class="content">
-							<a href = "images/consolelog.png"> <figure><img class = "resize1" src="images/consolelog.png" >
+							<a href = "images/consolelog.PNG"> <figure><img class = "resize1" src="images/consolelog.PNG" >
 								<figcaption>click for fullsize</figcaption></figure></a><br /> <br />
 						</div>
 						<p> The image above is what is displayed by the console log. The console.log prints text to the console and useful for debugging purposes. In our case, we use the each function on data.data.children. The getJSON returns the data, in the returned data, there is a subtree called data, and in this tree there is another subtree called children which consists of an array of objects. These objects contain a large variety of data including the images that we are appending to our page. However not all the objects are images, which is why even though there are 25 objects in the array, there are less images on the results page. In addition, we make the request through HTTPS and some of the images are from http, which is less secure so it will not allow us to access the data from children with urls from a http protocol. </p>
@@ -441,7 +441,7 @@ req.addEventListener("load",function(){
 							<p> First open up your command line and enter the following line<p>
 								<pre><code class = "nohighlight">curl -X POST -d 'grant_type=password&username=REDDIT_USERNAME&password=REDDIT_PASSWORD' --user 'CLIEND_ID:CLIENT_SECRET' https://www.reddit.com/api/v1/access_token</pre></code>
 							<p>Replace the REDDIT_USERNAME with your username and REDDIT_PASSWORD with your account password. Then replace CLIENT_ID with your own client id and CLIENT_SECRET with your own secret. You can find both the CLIENT_ID and CLIENT_SECRET on the app tab of your preferences page. I will now show you an example.</p>
-							<a href = "images/token1.png"> <figure><img class = "resize" src="images/token1.png" >
+							<a href = "images/token1.PNG"> <figure><img class = "resize" src="images/token1.PNG" >
 								<figcaption>click for fullsize</figcaption></figure></a>
 						</div>
 						<p>The part highlighted in teal is where your password goes, the part highlighted in red is where your client ID goes and the part highlighted in blue is where your secret goes. Finally, the area that is circled in silver is your access token. howtophilip is my username.</p>
@@ -465,7 +465,7 @@ req.addEventListener("load",function(){
 							<p> Now that you have your token, let's get your account information. Input the command below to your command line to get your account information. Replace TOKEN with the token you recieved in part 1 and PROJECT with the name of your project and YourUserName with your reddit username</p>
 							<pre><code>curl -H "Authorization: bearer TOKEN" -A "PROJECT by YourUsername" https://oauth.reddit.com/api/v1/me</pre></code>
 							<p>If you have done this, this is what it should look like</p>
-							<a href = "images/token2.png"> <figure><img class = "resize1" src="images/token2.png" >
+							<a href = "images/token2.PNG"> <figure><img class = "resize1" src="images/token2.PNG" >
 								<figcaption>click for fullsize</figcaption></figure></a>
 								<p> There is a ton of information that is sent back to us, such as I am not an employee, I dont have mail, my name, and I have no gold credits and so much more. This is a good method for getting all your account information at once.</p>
 								<p> Now are you ready for the last part? Click the button below</p>
@@ -558,7 +558,7 @@ req.addEventListener("load",function(){
 							<li> In the command prompt navigate your way to the folder you created and type the following command</li>
 							<li><pre><code>npm install snoowrap</pre></code></li>
 							<p>After doing this it should look something like this</p>
-							<a href = "images/bot1.png"> <figure><img class = "resize1" src="images/bot1.png" >
+							<a href = "images/bot1.PNG"> <figure><img class = "resize1" src="images/bot1.PNG" >
 								<figcaption>click for fullsize</figcaption></figure></a>
 						</ol>
 						</div>
@@ -628,8 +628,8 @@ const r = new snoowrap({
 							<h2>Method #4 - Post Example</h2>
 						</header>
 						<div class="content">
-							<p>Your code should look like this. <a href = "images/bot2.png"> <figure><img class = "resize1" src="images/bot2.png" >
-								<figcaption>click for fullsize</figcaption></figure></a>Your command prompt should look something like this.<a href = "images/bot3.png"> <figure><img class = "resize1" src="images/bot3.png" >
+							<p>Your code should look like this. <a href = "images/bot2.PNG"> <figure><img class = "resize1" src="images/bot2.PNG" >
+								<figcaption>click for fullsize</figcaption></figure></a>Your command prompt should look something like this.<a href = "images/bot3.PNG"> <figure><img class = "resize1" src="images/bot3.PNG" >
 									<figcaption>click for fullsize</figcaption></figure></a></p>
 						</div>
 						<footer>
@@ -649,7 +649,7 @@ const r = new snoowrap({
 						</header>
 						<div class="content">
 							<p>Now on the reddit page you should see your own post. And here it is.</p>
-							<a href = "images/bot4.png"> <figure><img class = "resize" src="images/bot4.png" >
+							<a href = "images/bot4.PNG"> <figure><img class = "resize" src="images/bot4.PNG" >
 								<figcaption>click for fullsize</figcaption></figure></a>
 								<p> Now you know how to make a post. Let's make a bot that will perform a search on a subreddit and then message you the results.</p>
 						</div>
@@ -742,7 +742,7 @@ r.getSubreddit('buildapcsales').search({query: 'GPU', time: 'week'})
 						</header>
 						<div class="content">
 							<p>Now that we know how the bot works, lets run it again using the node.js command prompt. If you did everything exactly as explained then you should have something similiar to the results shown below. Make sure you check your inbox, that is where everything should be.</p>
-							<a href = "images/bot5.png"> <figure><img class = "resize1" src="images/bot5.png" >
+							<a href = "images/bot5.PNG"> <figure><img class = "resize1" src="images/bot5.PNG" >
 								<figcaption>click for fullsize</figcaption></figure></a>
 								<p>Congratulations!!! You have finished this how to guide on the reddit API. You have all the tools and knowledge you need to know in order to use the reddit API to its full potential. Have fun!</p>
 						</div>
